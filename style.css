@@ -1,0 +1,50 @@
+.board {
+	width: 800px;
+	height: 800px;
+	background-color: #f7f7f7;
+	border: solid 2px #aaa;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.board div {
+	width: 78px;
+	height: 78px;
+	border-top: solid 1px #fff;
+	border-left: solid 1px #fff;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.board div:hover {
+	background-color: #e2e2e2;
+	cursor: pointer;
+}
+
+.board div:active,
+.board div.bomb.checked,
+.board div.checked {
+    border-top: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	background-color: #e2e2e2;
+}
+
+.board div.bomb.checked {
+	background-image: url(images/mine.png);
+    background-position: center center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+
+}
+
+.board div.flag {
+	background-image: url(images/flag.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
